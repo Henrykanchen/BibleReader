@@ -162,10 +162,10 @@ function createDownloadLink(blob) {
 		  xhr.open("POST","upload.php",true);
 		  xhr.send(fd);
 		*/
-		console.log('hello')
-		var FileSaver = require('file-saver');
-		var blob1 = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
-		FileSaver.saveAs(blob1, "test.txt");
+		//console.log('hello')
+		//var FileSaver = require('file-saver');
+		//var blob1 = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
+		//FileSaver.saveAs(blob1, "test.txt");
 		location.reload(true)
 	})
 	li.appendChild(document.createTextNode (" "))//add a space in between
