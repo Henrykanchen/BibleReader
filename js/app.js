@@ -148,6 +148,9 @@ function createDownloadLink(blob) {
 	upload.href="#";
 	upload.innerHTML = "Upload";
 	upload.addEventListener("click", function(event){
+
+		// XMLHttpRequest transfer to php
+		/*
 		  var xhr=new XMLHttpRequest();
 		  xhr.onload=function(e) {
 		      if(this.readyState === 4) {
@@ -158,8 +161,12 @@ function createDownloadLink(blob) {
 		  fd.append("audio_data",blob, filename);
 		  xhr.open("POST","upload.php",true);
 		  xhr.send(fd);
-
-		  location.reload(true)
+		*/
+		console.log('hello')
+		var FileSaver = require('file-saver');
+		var blob1 = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
+		FileSaver.saveAs(blob1, "test.txt");
+		location.reload(true)
 	})
 	li.appendChild(document.createTextNode (" "))//add a space in between
 	li.appendChild(upload)//add the upload link to li
