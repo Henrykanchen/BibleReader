@@ -1,3 +1,4 @@
+#!/usr/bin/php-cgi
 <?php
 print_r($_FILES); //this will print out the received name, temp name, type, size, etc.
 
